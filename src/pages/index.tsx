@@ -1,10 +1,11 @@
 import React, { ReactNode, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
+  Divider,
   Flex,
   FlexProps,
   Heading,
@@ -25,6 +26,7 @@ import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
+import CommunityEvents from "../components/CommunityEvents"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
@@ -37,7 +39,6 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -84,7 +85,7 @@ const ContentBox = (props: ChildOnlyProp) => (
 
 const StyledActionCard = chakra(ActionCard, {
   baseStyle: {
-    background: "background",
+    background: "background.base",
     borderRadius: "sm",
     border: "1px",
     borderColor: "text",
@@ -93,8 +94,6 @@ const StyledActionCard = chakra(ActionCard, {
 })
 
 const StyledCodeModal = chakra(CodeModal)
-
-const StyledCalloutBanner = chakra(CalloutBanner)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -144,22 +143,13 @@ const Row = (props: { children: ReactNode; isReversed?: boolean }) => (
   </Flex>
 )
 
-const ButtonLinkRow = (props: {
-  firstButton: { to: string; child: ReactNode }
-  secondButton?: { to: string; child: ReactNode }
-}) => (
+const ButtonLinkRow = (props: ChildOnlyProp) => (
   <Stack
     alignItems="flex-start"
     direction={{ base: "column", md: "row" }}
     spacing={{ base: 6, md: 2 }}
-  >
-    <ButtonLink to={props.firstButton.to}>{props.firstButton.child}</ButtonLink>
-    {!!props.secondButton && (
-      <ButtonLink variant="outline" gap={2} to={props.secondButton.to}>
-        {props.secondButton.child}
-      </ButtonLink>
-    )}
-  </Stack>
+    {...props}
+  />
 )
 
 const PageHeader = () => (
@@ -178,9 +168,11 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLink variant="outline" to="/learn/">
-      <Translation id="page-index-title-button" />
-    </ButtonLink>
+    <ButtonLinkRow>
+      <ButtonLink to="/learn/">
+        <Translation id="page-index-title-button" />
+      </ButtonLink>
+    </ButtonLinkRow>
   </Flex>
 )
 
@@ -197,8 +189,6 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
-
-  useConsoleEasterEgg()
 
   const cards = [
     {
@@ -237,7 +227,7 @@ const HomePage = ({
       alt: t("page-index-tout-upgrades-image-alt"),
       title: t("page-index-tout-upgrades-title"),
       description: t("page-index-tout-upgrades-description"),
-      to: "/upgrades/",
+      to: "/roadmap/",
     },
     {
       image: getImage(data.infrastructurefixed),
@@ -368,18 +358,14 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-what-is-ethereum-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/what-is-ethereum/",
-                child: <Translation id="page-index-what-is-ethereum-button" />,
-              }}
-              secondButton={{
-                to: "/eth/",
-                child: (
-                  <Translation id="page-index-what-is-ethereum-secondary-button" />
-                ),
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/what-is-ethereum/">
+                <Translation id="page-index-what-is-ethereum-button" />
+              </ButtonLink>
+              <ButtonLink to="/eth/" variant="outline">
+                <Translation id="page-index-what-is-ethereum-secondary-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
             <Img
@@ -401,12 +387,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-defi-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/defi/",
-                child: <Translation id="page-index-defi-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/defi/">
+                <Translation id="page-index-defi-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
             <Img
@@ -428,12 +413,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-nft-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/nft/",
-                child: <Translation id="page-index-nft-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/nft/">
+                <Translation id="page-index-nft-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
             <Img
@@ -456,18 +440,14 @@ const HomePage = ({
               <SectionDecription>
                 <Translation id="page-index-internet-description" />
               </SectionDecription>
-              <ButtonLinkRow
-                firstButton={{
-                  to: "/dapps/?category=technology",
-                  child: <Translation id="page-index-internet-button" />,
-                }}
-                secondButton={{
-                  to: "/wallets/",
-                  child: (
-                    <Translation id="page-index-internet-secondary-button" />
-                  ),
-                }}
-              />
+              <ButtonLinkRow>
+                <ButtonLink to="/dapps/?category=technology">
+                  <Translation id="page-index-internet-button" />
+                </ButtonLink>
+                <ButtonLink to="/wallets/" variant="outline">
+                  <Translation id="page-index-internet-secondary-button" />
+                </ButtonLink>
+              </ButtonLinkRow>
             </FeatureContent>
             <ImageContainer>
               <Img
@@ -488,7 +468,6 @@ const HomePage = ({
               content={codeExamples}
               clickHandler={toggleCodeExample}
               headerKey="page-index-developers-code-examples"
-              icon="code"
               isCode
               border="1px"
               borderColor="text"
@@ -504,12 +483,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-developers-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/dapps/?category=technology",
-                child: <Translation id="page-index-developers-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/dapps/?category=technology">
+                <Translation id="page-index-developers-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <StyledCodeModal
             isOpen={isModalOpen}
@@ -557,6 +535,8 @@ const HomePage = ({
         </ContentBox>
         <StatsBoxGrid />
       </GrayContainer>
+      <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
+      <CommunityEvents />
       {/* Explore Section */}
       <ContentBox>
         <Box pb={4}>
@@ -579,7 +559,7 @@ const HomePage = ({
             )
           })}
         </CardContainer>
-        <StyledCalloutBanner
+        <CalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
@@ -589,29 +569,19 @@ const HomePage = ({
           mb={16}
           mx={0}
         >
-          <ButtonLinkRow
-            firstButton={{
-              to: "/contributing/",
-              child: <Translation id="page-index-contribution-banner-button" />,
-            }}
-            secondButton={{
-              to: "https://github.com/ethereum/ethereum-org-website",
-              child: (
-                <>
-                  <Icon
-                    as={FaGithub}
-                    color="text"
-                    fontSize="2xl"
-                    _hover={{ color: "primary" }}
-                    _active={{ color: "primary" }}
-                    _focus={{ color: "primary" }}
-                  />
-                  GitHub
-                </>
-              ),
-            }}
-          />
-        </StyledCalloutBanner>
+          <ButtonLinkRow>
+            <ButtonLink to="/contributing/">
+              <Translation id="page-index-contribution-banner-button" />
+            </ButtonLink>
+            <ButtonLink
+              to="https://github.com/ethereum/ethereum-org-website"
+              leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
+              variant="outline"
+            >
+              GitHub
+            </ButtonLink>
+          </ButtonLinkRow>
+        </CalloutBanner>
       </ContentBox>
     </Flex>
   )
@@ -642,7 +612,12 @@ export const query = graphql`
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 740
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -702,7 +677,12 @@ export const query = graphql`
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 760
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
@@ -717,14 +697,24 @@ export const query = graphql`
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 720
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 760
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     infrastructurefixed: file(

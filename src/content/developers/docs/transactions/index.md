@@ -28,8 +28,8 @@ A submitted transaction includes the following information:
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `nonce` - a sequentially incrementing counter which indicates the transaction number from the account
 - `value` – amount of ETH to transfer from sender to recipient (denominated in WEI, where 1ETH equals 1e+18wei)
-- `data` – optional field to include arbitrary data
-- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) specifies the units of gas required by each computational step
+- `input data` – optional field to include arbitrary data
+- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The [EVM](/developers/docs/evm/opcodes) specifies the units of gas required by each computational step
 - `maxPriorityFeePerGas` - the maximum price of the consumed gas to be included as a tip to the validator
 - `maxFeePerGas` - the maximum fee per unit of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
@@ -100,7 +100,7 @@ Example response:
 }
 ```
 
-- the `raw` is the signed transaction in [Recursive Length Prefix (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp) encoded form
+- the `raw` is the signed transaction in [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp) encoded form
 - the `tx` is the signed transaction in JSON form
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
@@ -187,13 +187,13 @@ Watch Austin walk you through transactions, gas, and mining.
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
-Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:
+Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are [RLP-encoded](/developers/docs/data-structures-and-encoding/rlp/), to look something like this:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
 Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) to be implemented without affecting legacy transaction formats.
 
-[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) is what allows for this behaviour. Transactions are interpreted as:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) is what allows for this behavior. Transactions are interpreted as:
 
 `TransactionType || TransactionPayload`
 

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
-Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
+Note that after [The Merge](/roadmap/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
@@ -49,15 +49,7 @@ To simplify, let's think about running a node on both a local physical machine a
   - An option to buy preconfigured machines
   - You have to physically prepare, maintain, and potentially troubleshoot the machine and networking
 
-Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
-
-- [QuikNode](https://www.quiknode.io/)
-- [Blockdaemon](https://blockdaemon.com)
-- [Alchemy](https://www.alchemy.com/)
-- [Blast](https://blastapi.io/)
-- [Getblock](https://getblock.io/)
-
-Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
+Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. Check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
 #### Hardware {#hardware}
 
@@ -87,14 +79,14 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 8 GB RAM
-- 700GB free disk space
+- 2TB SSD
 - 10+ MBit/s bandwidth
 
 ##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
-- Fast SSD with 1+TB
+- Fast SSD with 2+TB
 - 25+ MBit/s bandwidth
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
@@ -329,7 +321,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Running Lodestar
@@ -376,7 +368,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
@@ -385,7 +377,7 @@ When a consensus client connects to the execution client to read the deposit con
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
+Running your own validator allows for [solo staking](/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
 The easiest way to get started with staking and validator key generation is to use the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 

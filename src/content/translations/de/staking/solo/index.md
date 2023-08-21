@@ -1,11 +1,12 @@
 ---
-title: Solo-Staking Ihrer ETH
-description: Ein Überblick darüber, wie Sie mit dem Solo-Staking Ihrer ETH beginnen können
+title: Solo-Staking Ihres ETH
+description: Ein Überblick darüber, wie Sie mit dem Solo-Staking Ihres ETH beginnen können
 lang: de
 template: staking
 emoji: ":money_with_wings:"
 image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie das Nashorn auf ihrem eigenen Computerchip.
+sidebarDepth: 2
 summaryPoints:
   - Erhalten Sie maximale Belohnungen direkt vom Protokoll, indem Sie sicherstellen, dass Ihr Validator ordnungsgemäß funktioniert und online ist
   - Benutzen Sie Hardware zu Hause und tragen Sie persönlich zur Sicherheit und Dezentralisierung des Ethereum-Netzwerks bei
@@ -14,8 +15,9 @@ summaryPoints:
 
 ## Was ist Solo-Staking? {#what-is-solo-staking}
 
-Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen
-Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
+Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
+
+**Das Solo-Staking erhöht die Dezentralisierung des Ethereum-Netzwerks **, damit Ethereum gegen Zensur resistenter und gegen Angriffe robuster wird. Andere Staking-Methoden können das Netzwerk nicht auf die gleiche Weise unterstützen. Das Solo-Staking ist die beste Staking-Option zur Absicherung von Ethereum.
 
 Ein Ethereum-Knoten besteht sowohl aus einem Client der Ausführungsschicht (Execution Layer, EL) als auch aus einem Client der Konsensschicht (Client Layer, CL). Diese Kunden sind Software, die mit einem gültigen Satz von Signaturschlüsseln zusammenarbeiten, um Transaktionen und Blöcke zu verifizieren, den korrekten Kopf der Kette zu bestätigen, Bestätigungen zu attestieren und Blöcke vorzuschlagen.
 
@@ -25,18 +27,12 @@ Ein Solo-Staker erhält Belohnungen direkt vom Protokoll dafür, dass sein Valid
 
 ## Warum Solo-Staken? {#why-stake-solo}
 
-Solo-Staking bringt mehr Verantwortung mit sich, bietet Ihnen aber maximale Kontrolle über Ihre Gelder und Staking-Einstellungen.
+Das Solo-Staking bringt mehr Verantwortung mit sich, bietet Ihnen aber die maximale Kontrolle über Ihre Mittel und Ihre Staking-Einstellungen.
 
 <CardGrid>
-  <Card title="Verdienen Sie frische ETH" emoji="💸">
-    Verdienen Sie in ETH denominierte Belohnungen direkt aus dem Protokoll, wenn Ihr Validator online ist, ohne dass dabei Zwischenhändler einen Anteil für sich in Anspruch nehmen.
-  </Card>
-  <Card title="Volle Kontrolle" emoji="🎛️">
-    Behalten Sie Ihre eigenen Schlüssel. Wählen Sie die Kombination aus Clients und Hardware, mit der Sie Ihr Risiko minimieren und am besten zur Gesundheit und Sicherheit des Netzwerks beitragen können. Staking-Dienste von Drittanbietern treffen diese Entscheidungen für Sie, und sie treffen nicht immer die sichersten Entscheidungen.
-  </Card>
-  <Card title="Netzwerksicherheit" emoji="🔐">
-    Solo-Staking ist die wirksamste Art des Staking. Indem Sie zu Hause einen Validator auf Ihrer eigenen Hardware laufen lassen, stärken Sie die Robustheit, Dezentralisierung und Sicherheit des Ethereum-Protokolls.
-  </Card>
+  <Card title="Verdienen Sie frische ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Volle Kontrolle" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Netzwerksicherheit" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Überlegungen vor dem Solo-Staking {#considerations-before-staking-solo}
@@ -44,32 +40,37 @@ Solo-Staking bringt mehr Verantwortung mit sich, bietet Ihnen aber maximale Kont
 So sehr wir uns wünschen, dass das Solo-Staking für alle zugänglich und risikofrei wäre, spiegelt dies nicht die Realität wider. Es gibt einige praktische und ernsthafte Überlegungen, die Sie beachten sollten, bevor Sie sich entscheiden, Ihre ETH solo zu staken.
 
 <InfoGrid>
-  <ExpandableCard title="Wichtiger Hinweis" eventCategory="SoloStaking" eventName="clicked required reading">
-    Wenn Sie Ihren eigenen Knoten betreiben, sollten Sie einige Zeit damit verbringen, die Verwendung der von Ihnen gewählten Software zu erlernen. Dies umfasst das Lesen der relevanten Dokumentation und das Einstimmen auf die Kommunikationskanäle dieser Entwicklerteams.
-    Je mehr Sie über die von Ihnen verwendete Software und die Funktionsweise von Proof-of-Stake (Stake-Nachweis) verstehen, desto weniger riskant ist es als Staker und desto einfacher wird es, alle Probleme zu beheben, die auf dem Weg als Node-Betreiber auftreten können. 
-  </ExpandableCard>
-  <ExpandableCard title="Vertraut im Umgang mit Computern" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Das Einrichten von Nodes erfordert ein angemessenes Maß an Sicherheit bei der Arbeit mit Computern, obwohl neue Tools dies im Laufe der Zeit einfacher machen. Das Verständnis der Befehlszeilenschnittstelle ist hilfreich, aber nicht mehr unbedingt erforderlich.
-    Es erfordert auch eine sehr einfache Hardware-Konfiguration und ein gewisses Verständnis der empfohlenen Mindestspezifikationen.
-  </ExpandableCard>
-  <ExpandableCard title="Sichere Schlüsselverwaltung" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Genauso wie private Schlüssel Ihre Ethereum-Adresse sichern, müssen Sie Schlüssel speziell für Ihren Validator generieren. Sie müssen verstehen, wie Sie Seed-Phrasen oder private Schlüssel sicher und geschützt aufbewahren.
-    <p style={{marginTop: "1rem"}}><a href="/security">Ethereum – Sicherheits- und Betrugsvorbeugung</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="Kein Abheben (im Moment)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Das Abheben von gestakten ETH oder Belohnungen von einem Validator-Guthaben wird noch nicht unterstützt. Unterstützung für Auszahlungen ist für das bevorstehende Shanghai-Upgrade geplant. Sie sollten damit rechnen, dass Ihre ETH für mindestens ein bis zwei Jahre gesperrt sind. Nach dem Shanghai-Upgrade können Sie Teile oder Ihren gesamten Einsatz frei abheben, wenn Sie dies wünschen.
-  </ExpandableCard>
-  <ExpandableCard title="Wartung" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware fällt gelegentlich aus, Netzwerkverbindungen fallen aus und Client-Software muss gelegentlich aktualisiert werden. Die Node-Wartung ist unvermeidlich und erfordert von Zeit zu Zeit Ihre Aufmerksamkeit. Sie sollten sicher sein, dass Sie über alle erwarteten Netzwerk-Upgrades oder andere wichtige Client-Upgrades informiert sind.
-  </ExpandableCard>
-  <ExpandableCard title="Zuverlässige Uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Ihre Belohnungen sind proportional zu der Zeit, in der Ihr Validator online ist und ordnungsgemäß attestiert. Ausfallzeiten führen zu Strafen, die proportional dazu sind, wie viele andere Validierer gleichzeitig offline sind, aber <a href="#faq">führen nicht zum Slashing</a>. Auch die Bandbreite spielt eine Rolle, da die Belohnungen für Bescheinigungen, die nicht rechtzeitig eingehen, gekürzt werden. Die Anforderungen sind unterschiedlich, es wird jedoch ein Minimum von 10 Mb/s Upload und Download empfohlen.
-  </ExpandableCard>
-  <ExpandableCard title="Slashing-Risiko" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em> eine viel schwerwiegendere Strafe, die auf böswillige Vergehen beschränkt ist. Wenn Sie einen Minderheiten-Client mit Ihren Schlüsseln jeweils auf nur einer Maschine laden, wird das Risiko des Schrumpfens minimiert. Davon abgesehen müssen sich alle Staker der Risiken von Slashing bewusst sein.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Mehr über Slashing und den Validator-Lebenszyklus</a></p>
-  </ExpandableCard>
+<ExpandableCard title="Wichtiger Hinweis" eventCategory="SoloStaking" eventName="clicked required reading">
+Wenn Sie Ihren eigenen Knoten betreiben, sollten Sie einige Zeit damit verbringen, die Verwendung der von Ihnen gewählten Software zu erlernen. Dies umfasst das Lesen der relevanten Dokumentation und das Einstimmen auf die Kommunikationskanäle dieser Entwicklerteams.
+
+Je mehr Sie über die von Ihnen verwendete Software und die Funktionsweise von Proof-of-Stake (Stake-Nachweis) verstehen, desto weniger riskant ist es als Staker und desto einfacher wird es, alle Probleme zu beheben, die auf dem Weg als Node-Betreiber auftreten können.
+</ExpandableCard>
+
+<ExpandableCard title="Vertraut im Umgang mit Computern" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Das Einrichten von Nodes erfordert ein angemessenes Maß an Sicherheit bei der Arbeit mit Computern, obwohl neue Tools dies im Laufe der Zeit einfacher machen. Das Verständnis der Befehlszeilenschnittstelle ist hilfreich, aber nicht mehr unbedingt erforderlich.
+
+Es erfordert auch eine sehr einfache Hardware-Konfiguration und ein gewisses Verständnis der empfohlenen Mindestspezifikationen.
+</ExpandableCard>
+
+<ExpandableCard title="Sichere Schlüsselverwaltung" eventCategory="SoloStaking" eventName="clicked secure key management">
+Genauso wie private Schlüssel Ihre Ethereum-Adresse sichern, müssen Sie Schlüssel speziell für Ihren Validator generieren. Sie müssen verstehen, wie Sie Seed-Phrasen oder private Schlüssel sicher und geschützt aufbewahren.
+
+<a href="/security/">Ethereum Sicherheit und Betrugsprävention</a>
+</ExpandableCard>
+
+<ExpandableCard title="Wartung" eventCategory="SoloStaking" eventName="clicked maintenance">
+Hardware fällt gelegentlich aus, Netzwerkverbindungen fallen aus und Client-Software muss gelegentlich aktualisiert werden. Die Node-Wartung ist unvermeidlich und erfordert von Zeit zu Zeit Ihre Aufmerksamkeit. Sie sollten sicher sein, dass Sie über alle erwarteten Netzwerk-Upgrades oder andere wichtige Client-Upgrades informiert sind.
+</ExpandableCard>
+
+<ExpandableCard title="Zuverlässige Uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Ihre Belohnungen sind proportional zu der Zeit, in der Ihr Validator online ist und ordnungsgemäß attestiert. Ausfallzeiten führen zu Strafen, die proportional dazu sind, wie viele andere Validatoren gleichzeitig offline sind, aber <a href="#faq">führen nicht zum Slashing</a>. Auch die Bandbreite spielt eine Rolle, da die Belohnungen für Bescheinigungen, die nicht rechtzeitig eingehen, gekürzt werden. Die Anforderungen sind unterschiedlich, es wird jedoch ein Minimum von 10 Mb/s Upload und Download empfohlen.
+</ExpandableCard>
+
+<ExpandableCard title="Slashing-Risiko" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em> eine viel schwerwiegendere Strafe, die auf böswillige Vergehen beschränkt ist. Wenn Sie einen Minderheiten-Client mit Ihren Schlüsseln jeweils auf nur einer Maschine laden, wird das Risiko des Schrumpfens minimiert. Davon abgesehen müssen sich alle Staker der Risiken von Slashing bewusst sein.
+
+Für mehr Informationen zu Slashing und dem Lebenszyklus von Validatoren, nutzen Sie <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">diesen Link</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -78,9 +79,11 @@ So sehr wir uns wünschen, dass das Solo-Staking für alle zugänglich und risik
 
 <StakingHowSoloWorks />
 
-Wenn Sie möchten, können Sie als Validator aussteigen, wodurch die Notwendigkeit entfällt, online zu sein, und alle weiteren Belohnungen gestoppt werden. Beachten Sie, dass diese Gelder bis zum geplanten Shanghai-Upgrade nicht _abgehoben_ werden können.
+Während Sie aktiv sind, erhalten Sie ETH-Prämien, die regelmäßig in Ihre Auszahlungsadresse eingezahlt werden.
 
-Nach Shanghai können die Benutzer ihre Prämien sowie ihren Einsatz abheben, wenn sie dies wünschen.
+Wenn Sie möchten, können Sie als Validator aussteigen, wodurch die Notwendigkeit entfällt, online zu sein, und alle weiteren Belohnungen gestoppt werden. Ihr verbleibendes Guthaben wird dann an die Auszahlungsadresse, die Sie bei der Einrichtung angeben, ausgezahlt.
+
+[Mehr zu Staking-Auszahlungen](/staking/withdrawals/)
 
 ## Beginnen Sie mit dem Staking-Launchpad {#get-started-on-the-staking-launchpad}
 
@@ -120,20 +123,20 @@ Haben Sie einen Vorschlag für ein Staking-Tool, das wir noch nicht haben? Sehen
 
 <StakingGuides />
 
-## FAQ {#faq}
+## Häufig gestellte Fragen {#faq}
 
 Dies sind einige der häufigsten Fragen zum Thema Staking, über die es sich zu informieren lohnt.
 
 <ExpandableCard title="Was ist ein Validator?">
 
-Ein _Validator_ ist eine virtuelle Einheit, die auf Ethereum lebt und am Konsens des Ethereum-Protokolls teilnimmt. Validatoren werden durch ein Guthaben, einen öffentlichen Schlüssel und andere Eigenschaften dargestellt. Ein _Validator-Client_ ist die Software, die im Namen des Validators handelt, indem sie dessen privaten Schlüssel hält und verwendet. Ein einzelner Validator-Client kann viele Schlüsselpaare enthalten und viele Validatoren steuern.
+Ein <em>Validator</em> ist eine virtuelle Einheit, die auf Ethereum existiert und am Konsens des Ethereum-Protokolls teilnimmt. Validatoren werden durch ein Guthaben, einen öffentlichen Schlüssel und andere Eigenschaften dargestellt. Ein <em>Validator-Client</em> ist die Software, die im Namen des Validators handelt, indem sie seinen privaten Schlüssel hält und verwendet. Ein einzelner Validator-Client kann viele Schlüsselpaare enthalten und viele Validatoren steuern.
 
 </ExpandableCard>
 
 <ExpandableCard title="Kann ich mehr als 32 ETH einzahlen?">
 Jedes Schlüsselpaar, das einem Validator zugeordnet ist, erfordert genau 32 ETH, um aktiviert zu werden. Mehr ETH, die in einen einzigen Schlüsselsatz eingezahlt werden, erhöhen das Belohnungspotenzial nicht, da jeder Validator auf ein <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effektives Guthaben von 32 ETH</a> begrenzt ist. Dies bedeutet, dass das Staking in Schritten von 32 ETH erfolgt, von denen jeder seinen eigenen Schlüsselsatz und sein eigenes Guthaben hat.
 
-Zahlen Sie nicht mehr als 32 ETH für einen einzelnen Validator ein. Es wird Ihre Belohnungen nicht erhöhen und bis zum geplanten Shanghai-Update gesperrt sein.
+Zahlen Sie nicht mehr als 32 ETH für einen einzelnen Validator ein. Sie wird Ihre Belohnungen nicht erhöhen. Wenn eine Auszahlungsadresse für den Validator festgelegt wurde, werden überschüssige Gelder über 32 ETH während des nächsten <a href="/staking/withdrawals/#validator-sweeping">Validator-Sweeps</a> automatisch an diese Adresse überwiesen.
 
 Wenn Ihnen Solo-Staking zu anspruchsvoll erscheint, ziehen Sie die Nutzung eines <a href="/staking/saas/">Staking-as-a-Service</a>-Anbieters in Betracht, oder wenn Sie mit weniger als 32 ETH arbeiten, schauen Sie sich die <a href="/staking/pools/">Staking-Pools</a> an.
 </ExpandableCard>
@@ -155,8 +158,10 @@ Das Ausführen eines Clients mit qualifizierter Mehrheit (jeder Client, der von 
 
 Äquivalente Fehler in einem <em>Minderheits-Client würden niemals abgeschlossen</em> und würden daher niemals zu einer Surround-Abstimmung, sondern einfach zu Inaktivitätsstrafen, <em>nicht zu Slashing</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Erfahren Sie mehr darüber, wie wichtig es ist, einen Minderheits-Client zu führen.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Erfahren Sie mehr über die Prävention von Slashing</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Erfahren Sie mehr darüber, wie wichtig es ist, einen Minderheits-Client zu führen.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Erfahren Sie mehr über die Prävention von Slashing</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Welcher Client ist der Beste?">
@@ -173,8 +178,18 @@ Obwohl ein virtueller privater Server (VPS) als Ersatz für Heim-Hardware verwen
 Je mehr Validator-Clients auf einer einzigen zentralisierten Cloud-Speicherlösung laufen, desto gefährlicher wird es für diese Benutzer. Jedes Ereignis, das diese Anbieter offline schaltet, sei es durch einen Angriff, behördliche Anforderungen oder nur Strom-/Internetausfälle, führt dazu, dass jeder Validator-Client, der sich auf diesen Server verlässt, gleichzeitig offline geht.
 
 Offline-Strafen sind proportional dazu, wie viele andere gleichzeitig offline sind. Die Verwendung eines VPS erhöht das Risiko, dass Offline-Strafen schwerwiegender sind, und erhöht Ihr Risiko von quadratischen Lecks oder Slashing, falls der Ausfall groß genug ist. Um Ihr eigenes Risiko und das Risiko für das Netzwerk zu minimieren, wird Benutzern dringend empfohlen, ihre eigene Hardware zu erwerben und zu betreiben.
+</ExpandableCard>
 
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Mehr zu Belohnungen und Strafen</a>
+<ExpandableCard title="Wie schalte ich meine Belohnungen frei oder bekomme mein ETH zurück?">
+Abhebungen jeglicher Art aus der Beaconchain erfordern die Angabe von Rücktrittsberechtigungen.
+
+Neue Staker setzen dies bei der Schlüsselgenerierung und Einzahlung. Bestehende Staker, die dies noch nicht eingestellt haben, können ihre Schlüssel aktualisieren, um diese Funktion zu unterstützen.
+
+Sobald die Auszahlungsdaten festgelegt sind, werden Prämienzahlungen (über den ursprünglichen 32) periodisch an die Auszahlungsadresse ausgezahlt.
+
+Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Prozess des Verlassens Ihres Validators abschließen.
+
+<ButtonLink to="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>
 </ExpandableCard>
 
 ## Weiterführende Informationen {#further-reading}
@@ -185,4 +200,3 @@ Offline-Strafen sind proportional dazu, wie viele andere gleichzeitig offline si
 - [Anleitung: Ethereum-Validator-Hardware kaufen](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
 - [Schritt für Schritt: Wie man dem Ethereum 2.0 Testnetz beitritt](https://kb.beaconcha.in/Guides/Tutorium-eth2-Multi-Client) - _Butta_
 - [Eth2-Slashing-Präventionstipps](https://medium.com/prysmatic-labs/eth2-Slashing-Präventionstipps-f6faa5025f50) – _Raul Jordan 2020_
-- [Belohnungen und Strafen auf Ethereum 2.0](https://consensys.net/blog/codefi/Belohnungen-und-Strafen-auf-Ethereum-20-phase-0/) - _James Beck, März 2020_

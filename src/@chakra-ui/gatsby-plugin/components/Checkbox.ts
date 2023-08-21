@@ -1,56 +1,45 @@
-import type { ComponentMultiStyleConfig } from "@chakra-ui/theme"
+import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react"
+import { checkboxAnatomy } from "@chakra-ui/anatomy"
+import {
+  checkboxDefaultTheme,
+  commonInputTriggerStyles,
+  defineMergeStyles,
+} from "./components.utils"
 
-const baseStyleControl = {
-  bg: "background",
-  _checked: {
-    bg: "primary400",
-    _hover: {
-      bg: "primary400",
-      borderColor: "primary600",
-    },
-    borderColor: "black50",
-  },
-  border: "1px",
-  borderColor: "black50",
-  borderRadius: "3px",
-  transition: "all 150ms",
-  _focusVisible: {
-    boxShadow: "none",
-  },
-  _hover: {
-    boxShadow: "tableItemBoxShadow",
-    border: "1px",
-    borderStyle: "solid",
-    borderColor: "primary600",
-    transition: "transform 0.1s",
-    transform: "scale(1.02)",
-  },
-}
+const { sizes: defaultSizes } = checkboxDefaultTheme
 
-export const Checkbox: ComponentMultiStyleConfig = {
-  parts: ["control"],
-  baseStyle: {
-    control: baseStyleControl,
-  },
-  sizes: {
-    md: {
-      control: {
-        h: "1.5rem",
-        w: "1.5rem",
-      },
-      icon: {
-        fontSize: "md",
-      },
-    },
-  },
-  variants: {
-    alignTop: {
-      control: {
-        mt: "0.25rem",
-      },
-    },
-  },
-  defaultProps: {
-    size: "md",
-  },
-}
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(checkboxAnatomy.keys)
+
+const { commonContainerProps, commonControlProps, commonLabelProps } =
+  commonInputTriggerStyles
+
+const checkboxMdSize = defaultSizes?.md
+
+const baseStyleControl = defineMergeStyles(
+  checkboxMdSize?.control,
+  commonControlProps,
+  {
+    boxSize: "var(--checkbox-size)", // Comes from default theme
+    borderRadius: "sm",
+  }
+)
+
+const baseStyleLabel = defineStyle({ ...commonLabelProps })
+
+const baseStyleContainer = defineStyle({ ...commonContainerProps })
+
+const baseStyleIcon = defineStyle({
+  boxSize: 2,
+})
+
+const baseStyle = definePartsStyle({
+  container: baseStyleContainer,
+  control: baseStyleControl,
+  label: baseStyleLabel,
+  icon: baseStyleIcon,
+})
+
+export const Checkbox = defineMultiStyleConfig({
+  baseStyle,
+})

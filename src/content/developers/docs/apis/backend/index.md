@@ -32,7 +32,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
-**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet ant Testnets._**
+**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet and Testnets._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
@@ -143,10 +143,29 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [Forum](https://forum.moralis.io/)
 
-\*_GetBlock- Blockchain-as-a-service for Web3 developement_
+**Chainbase -** **_All-in-one web3 data infrastructure for Ethereum._**
+
+- [chainbase.com](https://chainbase.com/)
+- [Documentation](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock-** **_Blockchain-as-a-service for Web3 developement_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)
+
+**BlockPi -** **_Provide more efficient and fast RPC services_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentation](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_The General Multi-Crypto Blockchain APIs Platform._**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [Documentation](https://services.tokeniew/docs?type=api)
+- [Github](https://github.com/Tokenview)
 
 ## Further reading {#further-reading}
 

@@ -24,17 +24,18 @@ Centenas de milhares de entusiastas do Ethereum se reúnem nestes fóruns na Int
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> –Comunidade orientada em torno da oferta de apoio à gestão de projetos para o desenvolvimento do Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> – Chat no Discord administrado pela ETHGlobal: uma comunidade online para hackers Ethereum em todo o mundo</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> – Comunidade Discord focada no desenvolvimento do Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">Discord EthStaker</Link> – Comunidade orientada para oferecer suporte no gerenciamento de projetos para o desenvolvimento do Ethereum</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - orientação, educação, apoio e recursos geridos pela comunidade para stakers existentes e potenciais</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Equipe do site Ethereum.org</Link> – pare e converse sobre desenvolvimento e design do site ethereum.org com a equipe e pessoas da comunidade</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> – comunidade focada em aprender desenvolvimento Web3 </SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> – comunidade de criadores da Web3 na qual construtores, lideranças industriais e entusiastas do Ethereum se encontram. somos apaixonados pelo desenvolvimento, design e cultura da Web3. venha construir conosco.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link>– chat para desenvolvimento do solidity (Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – chat para desenvolvimento do Solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> – comunidade de criadores da Web3 na qual construtores, líderes do setor e entusiastas do Ethereum se encontram. Somos apaixonados pelo desenvolvimento, design e cultura Web3. Venha criar conosco.</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — chat para desenvolvimento do solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — chat para desenvolvimento do solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _ — fórum de perguntas e respostas_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _ — fórum descentralizado de perguntas e respostas_</SocialListItem>
 
 ## YouTube e Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> – Mantenha-se atualizado com as últimas novidades da Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> – Conta oficial da Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> – Conta oficial da Fundação Ethereum</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> – O portal para o Ethereum, construído para a nossa comunidade global em crescimento</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Lista de contas influentes sobre o Ethereum no Twitter</Link></SocialListItem>
 

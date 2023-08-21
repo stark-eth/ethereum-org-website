@@ -6,7 +6,7 @@ lang: en
 
 ## What is proof-of-stake {#what-is-proof-of-stake}
 
-Proof-of-stake is a class of algorithm that can provide security to blockchains by ensuring that assets of value are lost by attackers who act dishonestly. Proof-of-stake systems require a set of validators to make some asset available that can be destroyed if the validator engages in some provably dishonest behaviour. Ethereum uses a proof-of-stake mechanism to secure the blockchain.
+Proof-of-stake is a class of algorithm that can provide security to blockchains by ensuring that assets of value are lost by attackers who act dishonestly. Proof-of-stake systems require a set of validators to make some asset available that can be destroyed if the validator engages in some provably dishonest behavior. Ethereum uses a proof-of-stake mechanism to secure the blockchain.
 
 ## How does proof-of-stake compare to proof-of-work? {#comparison-to-proof-of-work}
 
@@ -30,7 +30,7 @@ Yes. Nodes on a proof-of-stake network use a tiny amount of energy. A third-part
 
 ## Is proof-of-stake secure? {#is-pos-secure}
 
-Ethereum's proof-of-stake is very secure. The mechanism was researched, developed, and tested rigorously over eight years going live. The security guarantees are different from proof-of-work blockchains. In proof-of-stake, malicious validators can be actively punished ("slashed") and ejected from the validator set, costing a substantial amount of ETH. Under proof-of-work, an attacker can keep repeating their attack while they have sufficient hash power. It is also more costly to mount equivalent attacks on proof-of-stake Ethereum than under proof-of-work. To affect the liveness of the chain, at least 33% of the total staked ether on the network is required (except in the cases of very sophisticated attacks with an extremely low likelihood of success). To control the contents of future blocks, at least 51% of the total staked ETH is required, and to rewrite history, over 66% of the total stake is needed. The Ethereum protocol would destroy these assets in the 33% or 51% attack scenarios and by social consensus in the 66% attack scenario.
+Ethereum's proof-of-stake is very secure. The mechanism was researched, developed, and tested rigorously over eight years before going live. The security guarantees are different from proof-of-work blockchains. In proof-of-stake, malicious validators can be actively punished ("slashed") and ejected from the validator set, costing a substantial amount of ETH. Under proof-of-work, an attacker can keep repeating their attack while they have sufficient hash power. It is also more costly to mount equivalent attacks on proof-of-stake Ethereum than under proof-of-work. To affect the liveness of the chain, at least 33% of the total staked ether on the network is required (except in the cases of very sophisticated attacks with an extremely low likelihood of success). To control the contents of future blocks, at least 51% of the total staked ETH is required, and to rewrite history, over 66% of the total stake is needed. The Ethereum protocol would destroy these assets in the 33% or 51% attack scenarios and by social consensus in the 66% attack scenario.
 
 - [More on defending Ethereum proof-of-stake from attackers](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 - [More on proof-of-stake design](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
@@ -93,7 +93,7 @@ Social slashing is the ability of the community to coordinate a fork of the bloc
 
 ## Will I get slashed? {#will-i-get-slashed}
 
-As a validator, it is very difficult to get slashed unless you deliberately engage in malicious behaviour. Slashing is only implemented in very specific scenarios where validators propose multiple blocks for the same slot or contradict themselves with their attestations - these are very unlikely to arise accidentally.
+As a validator, it is very difficult to get slashed unless you deliberately engage in malicious behavior. Slashing is only implemented in very specific scenarios where validators propose multiple blocks for the same slot or contradict themselves with their attestations - these are very unlikely to arise accidentally.
 
 [More on slashing conditions](https://eth2book.info/altair/part2/incentives/slashing)
 
@@ -131,7 +131,7 @@ Censorship resistance is currently hard to prove. However, unlike proof-of-work,
 
 ## Can Ethereum's proof-of-stake system be 51% attacked? {#pos-51-attack}
 
-Yes. Proof-of-stake is vulnerable to 51% attacks, just like proof-of-work. Instead of the attack requiring 51% of the network's hash power, the attack requires 51% of the total staked ETH. An attacker that accumulates 51% of the total stake gets to control the fork-choice algorithm. This enables the attacker to censor certain transactions, do short-range reorgs and extract MEV by reordering blocks in their favor.
+Yes. Proof-of-stake is vulnerable to 51% attacks, just like proof-of-work. Instead of the attacker requiring 51% of the network's hash power, the attacker requires 51% of the total staked ETH. An attacker that accumulates 51% of the total stake gets to control the fork-choice algorithm. This enables the attacker to censor certain transactions, do short-range reorgs and extract MEV by reordering blocks in their favor.
 
 [More on attacks on proof-of-stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
@@ -163,7 +163,7 @@ No, there are several proof-of-stake blockchains. None are identical to Ethereum
 
 The Merge was the moment when Ethereum switched off its proof-of-work-based consensus mechanism and switched on its proof-of-stake-based consensus mechanism. The Merge happened on September 15, 2022.
 
-[More on The Merge](/upgrades/merge)
+[More on The Merge](/roadmap/merge)
 
 ## What are liveness and safety? {#what-are-liveness-and-safety}
 

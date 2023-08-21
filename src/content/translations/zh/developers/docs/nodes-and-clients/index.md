@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 以太坊是一个由计算机组成的分布式网络，这些计算机运行可验证区块和交易数据的软件，称为节点。 软件应用程序（客户端）必须在电脑上运行，将你的电脑变成一个以太坊节点。
 
-**注意：现在再也不能仅运行执行客户端了。 [合并](/upgrades/merge)后，执行客户端和共识客户端必须一起运行，用户才能够访问以太坊网络。**
+**注意：现在再也不能仅运行执行客户端了。 [合并](/roadmap/merge)后，执行客户端和共识客户端必须一起运行，用户才能够访问以太坊网络。**
 
 ## 前提条件 {#prerequisites}
 
@@ -24,7 +24,7 @@ sidebarDepth: 2
 - 执行客户端（也称为执行引擎、EL 客户端或旧称“以太坊 1”客户端）侦听网络中广播的新交易，在以太坊虚拟机中执行它们，并保存所有当前以太坊数据的最新状态和数据库。
 - 共识客户端（也称为信标节点、CL 客户端或旧称“以太坊 2”客户端）实现了权益证明共识算法，使网络能够根据来自执行客户端的经过验证的数据达成一致。
 
-在[合并](/upgrades/merge/)之前，共识层和执行层是独立的网络，以太坊上的所有交易和用户活动都发生在现在的执行层。 一个客户端软件为矿工生产的区块提供执行环境和共识验证。 2020 年 12 月后，共识层即[信标链](/upgrades/beacon-chain/)一直单独运行。 它引入了权益证明，并根据来自以太坊网络的数据协调验证者网络。
+在[合并](/roadmap/merge/)之前，共识层和执行层是独立的网络，以太坊上的所有交易和用户活动都发生在现在的执行层。 一个客户端软件为矿工生产的区块提供执行环境和共识验证。 2020 年 12 月后，共识层即[信标链](/roadmap/beacon-chain/)一直单独运行。 它引入了权益证明，并根据来自以太坊网络的数据协调验证者网络。
 
 通过合并，以太坊连接这些网络并过渡到权益证明。 执行客户端和共识客户端共同验证以太坊的状态。
 
@@ -95,9 +95,9 @@ sidebarDepth: 2
 - 你的节点根据共识规则独自验证所有交易和区块。 这意味着你不必依赖网络中的任何其他节点或完全信任它们。
 - 你可以将以太坊钱包与你自己的节点一起使用。 你可以更安全、更私密地使用去中心化应用程序，因为你不必将地址和余额泄露给随机节点。 你可以用自己的客户端检查所有内容。 [MetaMask](https://metamask.io)、[Frame](https://frame.sh/) 和[许多其他钱包](/wallets/find-wallet/)提供远程过程调用导入，这让它们可以使用你的节点。
 - 你可以运行和自我托管其他依赖于以太坊数据的服务。 例如，可以是信标链验证者、二层网络等软件、基础设施、区块浏览器、支付机构等。
-- 你可以提供自己的自定义[远程过程调用端点](https://ethereum.org/en/developers/docs/apis/json-rpc/)。 公开供社区使用，甚至私有托管的以太坊端点可以让用户使用你的节点，并避免大型中心化提供商。
+- 你可以提供自己的自定义[远程过程调用端点](/developers/docs/apis/json-rpc/)。 公开供社区使用，甚至私有托管的以太坊端点可以让用户使用你的节点，并避免大型中心化提供商。
 - 你可以使用**进程间通信 (IPC)** 连接到节点，或者重写节点将你的程序作为插件加载。 这样可以减少网络延迟，例如在使用 web3 库处理大量数据时或者当你需要尽快替换交易时（即抢先交易）会带来很大帮助。
-- 你可以直接质押以太币以保护网络并获得奖励。 请参见[单独质押](https://ethereum.org/en/staking/solo/)开始操作。
+- 你可以直接质押以太币以保护网络并获得奖励。 请参见[单独质押](/staking/solo/)开始操作。
 
 ![如何通过你的应用程序和节点访问以太坊](./nodes.png)
 
@@ -140,7 +140,6 @@ sidebarDepth: 2
 | [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快照（不提供服务）、快速、完全 | Archive、Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快速、完全                     | Archive、Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux、Windows、macOS | 主网、Sepolia、Görli、Rinkeby、Ropsten 等 | 完全                           | Archive、Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | 主网、Sepolia、Görli、Rinkeby、Ropsten    | 完全                           | Archive、Pruned |
 
 **注意，OpenEthereum [已废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。**请谨慎使用，最好改用其他客户端实现。
 
@@ -156,7 +155,7 @@ Besu 提供大量[相关文档](https://besu.hyperledger.org/en/stable/)，将�
 
 ### Erigon {#erigon}
 
-Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是一个完全重新架构的以太坊实现，目前用 Go 语言编写，但正在开发其他语言的实现，例如 [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39)。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
+Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是一个完全重新架构的以太坊实现，目前用 Go 语言编写，但正在开发其他语言的实现。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
 
 ### Go Ethereum {#geth}
 
@@ -176,9 +175,7 @@ Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的
 
 ## 共识客户端（原“Eth2”客户端） {#consensus-clients}
 
-有多种共识客户端（以前称为“以太坊 2”客户端）支持[共识升级](/upgrades/beacon-chain/)。 它们运行信标链，并且将在[合并](/upgrades/merge/)后向执行客户端提供权益证明共识机制。
-
-[查看共识客户端](/upgrades/get-involved/#clients)。
+有多种共识客户端（以前称为“以太坊 2”客户端）支持[共识升级](/roadmap/beacon-chain/)。 它们运行信标链，并且将在[合并](/roadmap/merge/)后向执行客户端提供权益证明共识机制。
 
 | 客户端                                                        | 语言       | 操作系统：            | 网络                                                 |
 | ------------------------------------------------------------- | ---------- | --------------------- | ---------------------------------------------------- |
@@ -293,7 +290,6 @@ Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenS
 
 - [以太坊 101 - 第二部分 - 了解节点](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes，2019 年 2 月 13 日_
 - [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux，2019 年 11 月 7 日_
-- [运行以太坊节点](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub，定期更新_
 
 ## 相关主题 {#related-topics}
 

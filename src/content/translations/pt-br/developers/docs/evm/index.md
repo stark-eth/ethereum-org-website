@@ -56,9 +56,9 @@ O bytecode compilado do contrato inteligente executa como um número de [opcodes
 
 Todas as implementações da EVM devem aderir à especificação descrita no Ethereum Yellowpaper.
 
-Durante o histórico de 7 anos do Ethereum, a EVM passou por várias revisões e existem várias implementações da EVM em várias linguagens de programação.
+Durante o histórico de 9 anos do Ethereum, a EVM passou por várias revisões e existem várias implementações da EVM em várias linguagens de programação.
 
-Todos os [clientes Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluem uma implementação de EVM. Além disso, existem várias implementações independentes, incluindo:
+Os [clientes de execução Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluem uma implementação EVM. Além disso, existem várias implementações independentes, incluindo:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -71,6 +71,7 @@ Todos os [clientes Ethereum](/developers/docs/nodes-and-clients/#execution-clien
 - [Jellopaper também conhecido como KEVM: semânticos de EVM em K](https://jellopaper.org/)
 - [O Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Códigos de operação da EVM](https://www.ethervm.io/)
+- [Referência interativa dos códigos de operação da máquina virtual Ethereum](https://www.evm.codes/)
 - [Uma breve introdução à documentação do Solidy](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Tópicos relacionados {#related-topics}

@@ -4,7 +4,6 @@ description: Come funziona il ponte standard per Optimism? Perché funziona cos�
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "optimism"
   - "ponte"
   - "livello 2"
 skill: intermediate
@@ -14,7 +13,7 @@ lang: it
 
 [Optimism](https://www.optimism.io/) è un [Rollup ottimistico](/developers/docs/scaling/optimistic-rollups/). I rollup ottimistici possono elaborare le transazioni a un prezzo molto più basso di quello della rete principale di Ethereum (nota anche come livello 1 o L1), poiché le transazioni sono elaborate solo da alcuni nodi, invece che da ogni nodo sulla rete. Allo stesso tempo, i dati vengono tutti scritti nel L1, così che tutto possa essere provato e ricostruito con le garanzie d'integrità e disponibilità della rete principale.
 
-Per usare le risorse del L1 su Optimism (o su qualsiasi altro L2), le risorse devono essere collegate con un [ponte](/bridges/#prerequisites). Un modo per farlo è che gli utenti blocchino le risorse (ETH e [token ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) sono le più comuni) nel L1 e ricevano le risorse equivalenti da usare nel L2. In definitiva, chiunque le riceva potrebbe volerle ricollegare al L1. Così facendo, le risorse sono bruciate nel L2 e poi rilasciate nuovamente all'utente nel L1.
+Per usare le risorse del L1 su Optimism (o su qualsiasi altro L2), le risorse devono essere collegate con un [ponte](/bridges/#prerequisites). Un modo per farlo è che gli utenti blocchino le risorse (ETH e [token ERC-20](/developers/docs/standards/tokens/erc-20/) sono le più comuni) nel L1 e ricevano le risorse equivalenti da usare nel L2. In definitiva, chiunque le riceva potrebbe volerle ricollegare al L1. Così facendo, le risorse sono bruciate nel L2 e poi rilasciate nuovamente all'utente nel L1.
 
 Questo è il modo in cui funziona il [ponte standard di Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
 
@@ -1014,7 +1013,7 @@ Il ponte L2 usa ERC-165 come controllo di integrità per assicurarsi che il cont
 
 Solo il ponte L2 può coniare e bruciare le risorse.
 
-`_mint` e `_burn` sono in realtà definiti nel [contratto ERC-20 di OpenZeppelin](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Quel contratto non li espone esternamente, perché le condizioni per coniare e bruciare token sono tanto varie quanto il numero di metodi per usare ERC-20.
+`_mint` e `_burn` sono in realtà definiti nel [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Quel contratto non li espone esternamente, perché le condizioni per coniare e bruciare token sono tanto varie quanto il numero di metodi per usare ERC-20.
 
 ## Codice del ponte di L2 {#l2-bridge-code}
 
